@@ -15,16 +15,16 @@ SERVICE_ACCOUNT_FILE = #Enter JSON key file name here
 SPREADSHEET_ID = #Enter SPREADSHEET_ID here
 
 # Sheet (Tab) Names and Column Headers
-SOURCE_SHEET_NAME_1 = 'Data Bank 2026_r1'         # The tab containing the data to clean
-SOURCE_COLUMN_HEADER_1 = 'STUDENT'        # The header of the column to clean
+SOURCE_SHEET_NAME_1 = # The tab containing the data to clean
+SOURCE_COLUMN_HEADER_1 = # The header of the column to clean
 
-SOURCE_SHEET_NAME_2 = 'School Guardian data 2026 (class change)'         # The tab containing the data to clean
-SOURCE_COLUMN_HEADER_2 = 'STUDENT'      # The header of the column to clean
+SOURCE_SHEET_NAME_2 = # The tab containing the data to clean
+SOURCE_COLUMN_HEADER_2 = # The header of the column to clean
 
-BLACKLIST_SHEET_NAME = 'Graduated'   # The tab containing the blacklist
-BLACKLIST_COLUMN_HEADER = 'Name'     # The header of the blacklist column
+BLACKLIST_SHEET_NAME =  # The tab containing the blacklist
+BLACKLIST_COLUMN_HEADER = # The header of the blacklist column
 
-OUTPUT_SHEET_NAME = 'School(without Graduated)'   # The tab where cleaned data will be saved
+OUTPUT_SHEET_NAME = # The tab where cleaned data will be saved
 
 # ==========================================
 # Helper Functions
