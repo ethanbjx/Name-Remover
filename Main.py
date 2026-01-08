@@ -8,18 +8,18 @@ from functools import wraps
 # Configuration
 # ==========================================
 # Path to your Google Service Account JSON key file
-SERVICE_ACCOUNT_FILE = 'ace-element-483717-d8-426fd9b1d130.json'
+SERVICE_ACCOUNT_FILE = #Enter JSON key file name here
 
 # Spreadsheet ID or Name (Make sure the service account has access!)
 # You can find the ID in the URL: docs.google.com/spreadsheets/d/SPREADSHEET_ID/edit
-SPREADSHEET_ID = '1we4_Lx5JMxkppl_qbefYhWhsa7lTVU-RTjDxe8e5L84' 
+SPREADSHEET_ID = #Enter SPREADSHEET_ID here
 
 # Sheet (Tab) Names and Column Headers
 SOURCE_SHEET_NAME_1 = 'Data Bank 2026_r1'         # The tab containing the data to clean
 SOURCE_COLUMN_HEADER_1 = 'STUDENT'        # The header of the column to clean
 
 SOURCE_SHEET_NAME_2 = 'School Guardian data 2026 (class change)'         # The tab containing the data to clean
-SOURCE_COLUMN_HEADER_2 = 'STUDENT'  
+SOURCE_COLUMN_HEADER_2 = 'STUDENT'      # The header of the column to clean
 
 BLACKLIST_SHEET_NAME = 'Graduated'   # The tab containing the blacklist
 BLACKLIST_COLUMN_HEADER = 'Name'     # The header of the blacklist column
@@ -98,7 +98,7 @@ def get_column_data(worksheet, column_header):
     return col_index, data, all_values
 
 def main():
-    # 1. Authentication
+    # Authentication
     print("Authenticating with Google Sheets...")
     if not os.path.exists(SERVICE_ACCOUNT_FILE):
         print(f"Error: '{SERVICE_ACCOUNT_FILE}' not found. Please place your service account JSON file in this directory.")
@@ -117,7 +117,7 @@ def main():
         return
 
     try:
-        # 2. Load Blacklist
+        # Load Blacklist
         print(f"Loading blacklist from '{BLACKLIST_SHEET_NAME}'...")
         try:
             blacklist_ws = sh.worksheet(BLACKLIST_SHEET_NAME)
@@ -131,7 +131,7 @@ def main():
         blacklist_set = {name.strip().lower() for name in blacklist_data if name and name.strip()}
         print(f"Blacklist loaded: {len(blacklist_set)} unique names.")
 
-        # 3. Process Sources
+        # Process Sources
         sources = [
             (SOURCE_SHEET_NAME_1, SOURCE_COLUMN_HEADER_1),
             (SOURCE_SHEET_NAME_2, SOURCE_COLUMN_HEADER_2)
