@@ -39,7 +39,7 @@ Open your command prompt
 
 Clone the repository
 
-	git clone  https://github.com/ethanbjx/Name-Remover/tree/main
+	git clone  https://github.com/ethanbjx/Name-Remover
 
 Edit main.py by substituting the JSON file name, SHEET_ID, sheet name and column name
 
